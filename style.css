@@ -14,10 +14,14 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
+
 #sessao-venda h1{
     margin-top: 20px;
     text-align: center;
     color: white;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 40pt;
 }
 #itens_section{
     
