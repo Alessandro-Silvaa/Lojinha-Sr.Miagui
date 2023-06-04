@@ -49,4 +49,30 @@ let ITENS_LOJA = [
     }
 ]
 
-createImageBit
+let cardContainer = document.getElementById("itens_section");
+
+ITENS_LOJA.forEach(function(item) {
+    let card = document.createElement("div");
+    card.className = "card";
+
+    let nomeElement = document.createElement("h3");
+    nomeElement.textContent = item.nome;
+
+    let precoElement = document.createElement("p");
+    precoElement.textContent = "Preço: R$" + item.preco.toFixed(2);
+
+    let imgElement = document.createElement("img");
+    imgElement.src = item.url_img;
+    imgElement.alt = item.nome;
+
+    let descricaoElement = document.createElement("p");
+    descricaoElement.textContent = item.descricao;
+    
+    card.appendChild(imgElement);
+    card.appendChild(nomeElement);
+    card.appendChild(precoElement);
+    card.appendChild(descricaoElement);
+
+    
+    cardContainer.appendChild(card);
+});
